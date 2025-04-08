@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown to PDF Converter</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Marked.js for Markdown parsing -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- html2pdf.js for PDF conversion -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Markdown to PDF Converter</h1>
+        </header>
+        
+        <main>
+            <div class="editor-container">
+                <div class="input-section">
+                    <div class="markdown-section">
+                        <h2>Markdown Input</h2>
+                        <textarea id="markdown-input" placeholder="Enter your markdown here..."></textarea>
+                    </div>
+                    
+                    <div class="css-section">
+                        <h2>Custom CSS</h2>
+                        <textarea id="css-input" placeholder="Enter your custom CSS here..."></textarea>
+                    </div>
+                </div>
+                
+                <div class="preview-section">
+                    <h2>Live Preview</h2>
+                    <div class="toolbar">
+                        <button id="export-pdf">Export as PDF</button>
+                    </div>
+                    <div id="preview-container">
+                        <style id="custom-css-style"></style>
+                        <div id="preview-content"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>Client-side Markdown to PDF converter - No data is sent to any server</p>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html> 
